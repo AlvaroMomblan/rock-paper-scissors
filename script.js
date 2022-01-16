@@ -30,7 +30,7 @@ function game() {
         if (result === -1) console.log('Select a valid option (rock, paper or scissors)');
         else {
             if (result === 1) {
-                aconsole.log(`You win! ${playerSelection} beats ${computerSelection}`);
+                console.log(`You win! ${playerSelection} beats ${computerSelection}`);
                 playerScore++;
             } else if (result === 2) {
                 console.log(`You lose! ${playerSelection} loses to ${computerSelection}`);
@@ -39,7 +39,8 @@ function game() {
             round++;
         }
     }
-    console.log(playerScore > computerScore ? 'You win the game!' : 'You lose the game...');
+    console.log(playerScore > computerScore ? 'You win the game!' : 
+        playerScore < computerScore ? 'You lose the game...' : 'The game ended in a draw');
     console.log(`\nFinal score --> Player: ${playerScore} --- Computer: ${computerScore}`);
 }
 
